@@ -1,2 +1,1 @@
-Criar um contador de dias
-O usuário deve escolher a data alvo e a página deve exibir quantos dias faltam para chegar até a data escolhida
+A minha ideia é criar um contador que seja capaz de calcular a diferença de dias entre a data atual e a data informada pelo usuário. O contador deve levar em consideração a diferença de dias entre os meses e anos, incluindo anos bissextos.
