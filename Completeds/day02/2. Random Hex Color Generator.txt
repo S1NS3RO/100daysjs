@@ -1,0 +1,5 @@
+2. Random Hex Color Generator
+
+cores em hexadecimal são variações de 6 dígitos precedidos de um #, os dígitos vão de A-F e 0-9
+
+Criar um gerador randômico que contenha apenas esses dígitos deve funcionar. 
