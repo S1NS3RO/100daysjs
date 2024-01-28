@@ -2,7 +2,7 @@
 
 1. Counter app 🆗
 2. Random Hex Generator 🆗
-3. Conversor de Moeda
+3. Currency Converter 🆗
 4. Modal/Popup
 5. Palindrome Checker
 6. Vowel Counter App
