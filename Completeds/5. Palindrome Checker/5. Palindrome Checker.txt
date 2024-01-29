@@ -1,0 +1,1 @@
+Neste desafio usei o método split() para separar a palavra em um array, reverse() para inverter a posição das letras e join() para uni-las, depois verifiquei se a palavra correspondia a mesma digitada.

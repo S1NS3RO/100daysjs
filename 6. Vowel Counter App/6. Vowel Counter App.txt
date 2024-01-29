@@ -1,0 +1,1 @@
+Vowel Counter App é um app capaz de contar quantas vogais existem na palavra ou frase

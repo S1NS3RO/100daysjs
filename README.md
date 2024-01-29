@@ -4,7 +4,7 @@
 2. Random Hex Generator 🆗
 3. Currency Converter 🆗
 4. Modal, Popup 🆗
-5. Palindrome Checker
+5. Palindrome Checker 🆗
 6. Vowel Counter App
 7. Click to Copy
 8. Google Drive Download Link Generator
