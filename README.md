@@ -5,8 +5,8 @@
 3. Currency Converter 🆗
 4. Modal, Popup 🆗
 5. Palindrome Checker 🆗
-6. Vowel Counter App
-7. Click to Copy
+6. Vowel Counter App 🆗
+7. Universal Unit Converter
 8. Google Drive Download Link Generator
 9. Weather App
 10. Input Field Character Counter
