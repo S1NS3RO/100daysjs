@@ -302,3 +302,7 @@ input {
   background: #fdc7c7;
   color: red;
 }
+/* 6. Vowel Counter App */
+.vowel_counter_app input {
+  text-transform: uppercase;
+}
