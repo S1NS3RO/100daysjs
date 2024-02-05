@@ -116,8 +116,7 @@ section h1 {
   padding: 2rem;
   box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.2);
   gap: 1rem;
-  min-width: 300px;
-  max-width: 100%;
+  min-width: 290px;
   margin: auto;
   border-radius: 3px;
 }
@@ -176,6 +175,7 @@ input {
 .random_hex_generator {
   border: 2px solid var(--inicial-color);
   align-items: center;
+  box-shadow: none;
 }
 
 #color {
