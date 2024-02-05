@@ -170,8 +170,8 @@ const palavra = document.querySelector('#palavra')
 const mensagem = document.querySelector('.mensagem')
 
 const verificar = () => {
-  const palavraArray = palavra.value.split('').join()
-  const palavraArrayReverse = palavra.value.split('').reverse().join()
+  const palavraArray = palavra.value.toUpperCase().split('').join()
+  const palavraArrayReverse = palavra.value.toUpperCase().split('').reverse().join()
 
   if (palavra.value === '') {
     mensagem.classList.remove('false')
