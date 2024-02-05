@@ -1,0 +1,9 @@
+Conversor de unidades de medida? Criar um aplicativo onde os usuários podem converter entre diferentes unidades de medida, como:
+
+comprimento (metros, centímetros, polegadas)
+
+peso (quilogramas, gramas, libras)
+
+temperatura (Celsius, Fahrenheit)
+
+Isso envolverá capturar a entrada do usuário, realizar cálculos de conversão e exibir o resultado. É um desafio prático que envolve manipulação de dados e lógica de programação, adequado para praticar JavaScript.
