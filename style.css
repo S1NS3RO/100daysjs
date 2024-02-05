@@ -25,7 +25,7 @@ body {
 }
 
 a {
-  color: rgb(6, 72, 99);
+  color: rgb(47, 158, 202);
   cursor: pointer;
 }
 
@@ -236,6 +236,7 @@ input {
 /* 4. Modal, Popup */
 .modal_popup {
   display: block;
+  text-align: center;
 }
 
 .wrapperModal {
