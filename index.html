@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <title>100DaysJS</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        100DaysJS - Challenge
+
+        <a
+          href="https://github.com/S1NS3RO/100daysjs"
+          target="_blank"
+          ><i class="bi bi-github"></i
+        ></a>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h1>1. Counter app 🆗<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content">
+          <p>
+            Eu quero fazer um contador que calcule quantos dias se passaram entre a data de hoje e a
+            data que o usuário digitar. Ele vai levar em conta os diferentes números de dias em cada
+            mês, incluindo anos bissextos.
+          </p>
+          <div class="wrapper counter_app">
+            <div>DATA ATUAL<span class="nowDate">18/01/2024 21:48</span></div>
+            <hr />
+            <div>
+              DATA ESCOLHIDA
+              <span class="selectedDate">
+                <input
+                  type="date"
+                  name="dateTime"
+                  id="dateTime"
+                  oninput="obterData()" />
+              </span>
+            </div>
+            <hr />
+            <div class="missing">
+              <span class="newDate">Selecione uma data 🤠</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1>
+          2. Random Hex Color Generator 🆗<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content">
+          <p>
+            Cores em hexadecimal são variações de 6 dígitos precedidos de um #, os dígitos vão de
+            A-F e 0-9 Criar um gerador randômico que contenha apenas esses dígitos deve funcionar.
+          </p>
+          <div class="wrapper random_hex_generator">
+            <input
+              type="color"
+              name="color"
+              id="color"
+              value="#73D7FF" />
+            <div class="icon_span">
+              <span class="hex_span">#73D7FF</span><i class="bi bi-copy"></i>
+            </div>
+            <button class="generate_btn">Gerar</button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1>3. Conversor de Moeda 🆗<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content">
+          <p>
+            Vou utilizar a Awesome API para obter as cotações em tempo real api:
+            https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL
+          </p>
+          <div class="wrapper">
+            <div class="select_currency">
+              <div>
+                <input
+                  type="radio"
+                  name="currency"
+                  onchange="atualizaFetch()"
+                  id="USD"
+                  checked /><label for="USD">USD</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="currency"
+                  onchange="atualizaFetch()"
+                  id="EUR" /><label for="EUR">EUR</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="currency"
+                  onchange="atualizaFetch()"
+                  id="BTC" /><label for="BTC">BTC</label>
+              </div>
+            </div>
+            <input
+              type="number"
+              id="real"
+              value="1"
+              onchange="atualizaFetch()"
+              placeholder="Selecione a moeda" />
+            <p>
+              Real:
+              <span class="blr_value">R$ 0,00 </span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1>4. Modal, Popup 🆗<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content">
+          <p>Criar um poupup que tem opção de abrir e fechar</p>
+          <div class="wrapper modal_popup">Clique para <a>abrir o modal</a>.</div>
+          <div class="wrapperModal">
+            <div class="modal">
+              <a
+                class="fechar"
+                alt="Fechar modal">
+                X
+              </a>
+              Este é o modal aberto 🤖
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1>5. Palindrome Checker 🆗<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content">
+          <p>
+            Neste desafio usei o método split() para separar a palavra em um array, reverse() para
+            inverter a posição das letras e join() para uni-las, depois verifiquei se a palavra
+            correspondia a mesma digitada.
+          </p>
+          <div class="wrapper palindrome_checker">
+            <p>É UM PALÍNDROMO?</p>
+            <input
+              type="text"
+              name="palavra"
+              id="palavra"
+              oninput="verificar()" />
+
+            <span class="mensagem">Digite uma palavra</span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1>6. Vowel Counter App 🔃<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content">
+          <p>
+            Vowel Counter App é um app capaz de contar quantas vogais existem na palavra ou frase
+          </p>
+          <div class="wrapper">Conteúdo do desafio</div>
+        </div>
+      </section>
+      <section>
+        <h1>7. Click to Copy 🔃<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>
+          8. Google Drive Download Link Generator 🔃<i class="bi bi-plus-lg"></i
+          ><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>9. Weather App 🔃<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>
+          10. Input Field Character Counter 🔃<i class="bi bi-plus-lg"></i
+          ><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>11. Lyrics Search App<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>
+          12. Internet Connection Status Detector<i class="bi bi-plus-lg"></i
+          ><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>13. Quiz App<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>14. API Project<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>15. HTTP Request Project<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>
+          16. Random Quote Generator<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>17. List Search Project<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>18. Date Countdown<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>19. Time Countdown<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>20. Tip Calculator<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>21. Smooth Scroll Effect<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>
+          22. Sticky Nav Bar on Scroll<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>23. Active Menu Switcher<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>24. Scroll To Top<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>
+          25. Responsive Mobile Menu - part 1 & 2<i class="bi bi-plus-lg"></i
+          ><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>
+          26. Responsive Mobile Menu with Submenu<i class="bi bi-plus-lg"></i
+          ><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>27. Page Scroll Indicator<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>
+          28. Newsletter Form on Scroll<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>
+          29. Page Animation With AOS Library<i class="bi bi-plus-lg"></i
+          ><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>30. Password Generator<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>31. Local Storage<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>32. Simple ToDo App<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>
+          33. Todo App with Local Storage<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>34. Notes App<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>35. BMI Calculator<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>36. Calculator<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>37. Digital Clock<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>38. Weight Converter<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>39. Temperature Converter<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>40. Running Game<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>41. Word Count Tool<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>42. Accordion<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>
+          43. Async Await - Random Joke Generator<i class="bi bi-plus-lg"></i
+          ><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>
+          44. Modules, Imports and Exports<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>
+          45. GitHub Profile Search App<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>46. Wikipedia Search App<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>47. Image Slider<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>
+          48. JavaScript Array Methods<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>49. Data Attribute and JS<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>50. Product Filter<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>
+          51. Product Carousel Slider<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>52. Vertical Tabs<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>53. Count Up App<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>54. Digital Piano<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>55. Form Validation<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>
+          56. Password Visibility Toggle<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>
+          57. Password Strength Indicator<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i>
+        </h1>
+        <div class="content"></div>
+      </section>
+      <section>
+        <h1>58. Animated Login UI<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+        <div class="content"></div>
+      </section>
+      <!--
+        <section>
+            <h1>X. Título<i class="bi bi-plus-lg"></i><i class="bi bi-dash-lg"></i></h1>
+                <div class="content">
+                    <p>
+                        Descrição
+                    </p>
+                    <div class="wrapper">
+                        Conteúdo do desafio
+                    </div>
+                </div>
+        </section>
+      -->
+    </main>
+    <footer><div class="footer">&copy;Douglas Vargas 2024</div></footer>
+    <a
+      href="#"
+      class="pra_cima"
+      >🔝</a
+    >
+    <script src="script.js"></script>
+  </body>
+</html>
