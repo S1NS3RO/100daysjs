@@ -110,6 +110,11 @@ section h1 {
   padding: 0 1rem;
 }
 
+.active {
+  height: auto !important;
+  padding: 1rem;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -187,6 +192,8 @@ input {
 }
 
 .icon_span {
+  cursor: pointer;
+  user-select: none;
   position: relative;
   padding: 0.5rem;
   width: 80%;
@@ -195,6 +202,22 @@ input {
   font-size: 1.5rem;
   border-radius: 5px;
   font-weight: bold;
+  position: relative;
+}
+
+.copiado {
+  opacity: 0;
+  position: absolute;
+  top: -35%;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 3px 6px;
+  border-radius: 3px;
+  color: white;
+  font-weight: 300;
+  right: -10%;
+  user-select: none;
+  transition: 0.2s;
 }
 
 .icon_span i {
@@ -204,7 +227,7 @@ input {
   font-size: 1rem;
 }
 
-.icon_span:active i {
+.icon_span:active {
   color: var(--inicial-color);
 }
 
@@ -305,4 +328,9 @@ input {
 /* 6. Vowel Counter App */
 .vowel_counter_app input {
   text-transform: uppercase;
+}
+
+.vowel_counter_app p {
+  word-wrap: break-word;
+  letter-spacing: 2px;
 }

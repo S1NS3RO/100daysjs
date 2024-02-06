@@ -1,22 +1,17 @@
 const sections = document.querySelectorAll('section')
 
 sections.forEach((section) => {
-  const h1 = section.querySelector('h1')
   const contentDiv = section.querySelector('.content')
+  const h1 = section.querySelector('h1')
   const biPlusLg = section.querySelector('.bi-plus-lg')
   const biDashLg = section.querySelector('.bi-dash-lg')
 
   h1.addEventListener('click', () => {
+    contentDiv.classList.toggle('active')
     if (contentDiv.style.height === '0px' || contentDiv.style.height === '') {
-      // Abrir
-      contentDiv.style.height = contentDiv.scrollHeight + 32 + 'px'
-      contentDiv.style.padding = '1rem'
       biPlusLg.style.display = 'none'
       biDashLg.style.display = 'block'
     } else {
-      // Fechar
-      contentDiv.style.height = '0px'
-      contentDiv.style.padding = '0 1rem'
       biPlusLg.style.display = 'block'
       biDashLg.style.display = 'none'
     }
@@ -59,16 +54,22 @@ function obterData() {
 const wrapper = document.querySelector('.wrapper')
 const color_box = document.querySelector('#color')
 const hex_span = document.querySelector('.hex_span')
+const icon_span = document.querySelector('.icon_span')
 const generate_btn = document.querySelector('.generate_btn')
+const copiado = document.querySelector('.copiado')
 
 let randomColor = '#'
 let newColor = '#ff0f0f'
 
-hex_span.addEventListener('click', () => {
+icon_span.addEventListener('click', () => {
   navigator.clipboard
     .writeText(newColor)
     .then(function () {
       console.log('Texto copiado para a área de transferência')
+      copiado.style.opacity = '1'
+      setTimeout(() => {
+        copiado.style.opacity = '0'
+      }, 1000)
     })
     .catch(function (err) {
       console.error('Erro ao copiar texto: ', err)
@@ -216,18 +217,18 @@ const contar = () => {
       vogaisSeparadas.push(letra)
     } else {
       if (letra === ' ') {
-        outrasSeparadas.push('[Espaço]')
+        outrasSeparadas.push('\u23B5')
       } else {
         outrasSeparadas.push(letra)
       }
     }
   })
 
-  consoantesPg.innerHTML = `${consoantesSeparadas.length}<br/> -> ${consoantesSeparadas}`
+  consoantesPg.innerHTML = `<b>${consoantesSeparadas.length}</b><br/>${consoantesSeparadas}`
 
-  vogaisPg.innerHTML = `${vogaisSeparadas.length}<br/> -> ${vogaisSeparadas}`
+  vogaisPg.innerHTML = `<b>${vogaisSeparadas.length}</b><br/>${vogaisSeparadas}`
 
-  outrasPg.innerHTML = `${outrasSeparadas.length}<br/> -> ${outrasSeparadas}`
+  outrasPg.innerHTML = `<b>${outrasSeparadas.length}</b><br/>${outrasSeparadas}`
 }
 
 contar()
