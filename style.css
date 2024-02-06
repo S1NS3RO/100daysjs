@@ -260,6 +260,7 @@ input {
 .modal_popup {
   display: block;
   text-align: center;
+  user-select: none;
 }
 
 .wrapperModal {
