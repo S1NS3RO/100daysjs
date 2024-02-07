@@ -181,6 +181,7 @@ input {
   border: 2px solid var(--inicial-color);
   align-items: center;
   box-shadow: none;
+  width: 300px;
 }
 
 #color {
