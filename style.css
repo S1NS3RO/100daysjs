@@ -328,6 +328,10 @@ input {
   color: red;
 }
 /* 6. Vowel Counter App */
+.vowel_counter_app {
+  width: 300px;
+}
+
 .vowel_counter_app input {
   text-transform: uppercase;
 }
