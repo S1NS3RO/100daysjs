@@ -121,7 +121,7 @@ section h1 {
   padding: 2rem;
   box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.2);
   gap: 1rem;
-  width: 290px;
+  max-width: 100%;
   margin: auto;
   border-radius: 3px;
 }
@@ -335,3 +335,5 @@ input {
   word-wrap: break-word;
   letter-spacing: 2px;
 }
+
+/* 7. Universal Unit Converter */

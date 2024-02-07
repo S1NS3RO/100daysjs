@@ -8,7 +8,7 @@ sections.forEach((section) => {
 
   h1.addEventListener('click', () => {
     contentDiv.classList.toggle('active')
-    if (contentDiv.style.height === '0px' || contentDiv.style.height === '') {
+    if (contentDiv.classList.contains('active')) {
       biPlusLg.style.display = 'none'
       biDashLg.style.display = 'block'
     } else {
@@ -232,3 +232,5 @@ const contar = () => {
 }
 
 contar()
+
+// 7. Universal Unit Converter
